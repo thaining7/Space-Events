@@ -1,12 +1,16 @@
-# Starlord
-One-stop shop for Stargazers and lovers of Astronomy!
+# Space Events
+
+#### One-stop shop for Stargazers and lovers of Astronomy!
 
 https://star-lord.herokuapp.com/
 
 ---
 
-## How It Works
-Starlord is an app built on Node and uses Express as a server. After viewing upcoming events users can favorite events they wish to monitor as well as see the best time for Stargazing in their area in the next week. Views are created via Handlebars with Foundation as a framework. ORM / database creation is based off Sequelize.
+# Motivation
+
+#### This applications goal is to provoke curiosity and cause one to think about the origin of life and the universe by providing a glimpse into celestial events
+
+#### Starlord is an app built on Node and uses Express as a server. After viewing upcoming events users can favorite events they wish to monitor as well as see the best time for Stargazing in their area in the next week. Views are created via Handlebars with Foundation as a framework. ORM / database creation is based off Sequelize.
 
 ## Technologies Used
 * NodeJS
