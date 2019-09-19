@@ -64,4 +64,5 @@ $.get("/api/apod", function (data) {
   * Sign up and create a username and password, or sign in with your existing username and password 
   * Upon logging in, the main page will display upcoming events
   * Click the favorite button to save an event
+  * Check out the photo of the day displayed in the favorited events menu
   * Click the Upcoming Stargaze Dates link in the navigation menu and enter a city to find the best upcoming weather conditions for stargazing
