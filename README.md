@@ -56,15 +56,12 @@ $.get("/api/apod", function (data) {
   
   # API Reference
   
-  [APOD](https://www.npmjs.com/package/apod-nasa)
-  [Stargazing-Time](https://www.npmjs.com/package/stargazing-time)
+  * [APOD](https://www.npmjs.com/package/apod-nasa)
+  * [Stargazing-Time](https://www.npmjs.com/package/stargazing-time)
   
   # How to Use
   
-  * sign up and create a username and password, or sign in to the app with your existing username and password 
+  * Sign up and create a username and password, or sign in with your existing username and password 
   * Upon logging in, the main page will display upcoming events
   * Click the favorite button to save an event
   * Click the Upcoming Stargaze Dates link in the navigation menu and enter a city to find the best upcoming weather conditions for stargazing
-  
-  
-  
