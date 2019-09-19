@@ -10,7 +10,7 @@ https://star-lord.herokuapp.com/
 
 #### This applications goal is to provoke curiosity and cause one to think about the origin of life and the universe by providing a glimpse into celestial events
 
-> The heavens declare the glory of God; And the firmament showeth his handiwork. > - Psalm 19:1
+> The heavens declare the glory of God; And the firmament showeth his handiwork. - Psalm 19:1
 
 # Screenshots
 
