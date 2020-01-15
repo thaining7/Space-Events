@@ -1,11 +1,11 @@
-$(document).ready(function() {
+$(document).ready(function () {
   // Getting references to our form and inputs
-  
+
   var emailInput = $("#email-input");
   var passwordInput = $("#password-input");
 
   // When the form is submitted, we validate there's an email and password entered
-  $(document).on("click", "#submit", function(){
+  $(document).on("click", "#submit", function () {
 
     event.preventDefault();
     var userData = {
@@ -28,10 +28,10 @@ $(document).ready(function() {
     $.post("/api/login", {
       email: email,
       password: password
-    }).then(function(data) {
+    }).then(function (data) {
       window.location.replace(data);
       // If there's an error, log the error
-    }).catch(function(err) {
+    }).catch(function (err) {
       console.log(err);
     });
   }

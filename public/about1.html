@@ -1,73 +1,94 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" dir="ltr">
 
 <head>
   <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Starlord | About</title>
-  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+
+  <title>Space Events | About</title>
+
   <link rel="stylesheet" href="./assets/css/foundation.css">
   <link rel="stylesheet" href="./assets/css/app.css">
 </head>
 
 <body>
 
-  <div class="top-bar" style="opacity: 0.7">
-    <div class="top-bar-left">
-      <ul class="menu">
-        <li class="menu-text">Space Events Site</li>
+  <div class="grid-container">
 
-        <li><a href="/members">Home</a></li>
-        <li><a href="/stargaze">Upcoming Stargaze Dates</a></li>
-      </ul>
+    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+      <div class="title-bar-title">Menu</div>
     </div>
-    <div class="top-bar-right">
-      <ul class="menu">
-        <!-- <li><a href="#">Three</a></li>
+
+    <div class="top-bar" id="responsive-menu" style="opacity: 0.7">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Space Events</li>
+
+          <li><a href="/members">Home</a></li>
+          <li><a href="/stargaze">Stargazing</a></li>
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+          <!-- <li><a href="#">Three</a></li>
         <li><a href="#">Four</a></li>
         <li><a href="#">Five</a></li> -->
-        <li><a class="navbar-brand" href="/logout">
-            Logout
-          </a>
-        </li>
-      </ul>
+          <li><a class="navbar-brand" href="/logout">
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
-  </div>
 
-  <div class="callout small primary" style="opacity: 0.7">
-    <div class="row column text-center">
-      <h1>About</h1>
-      <!-- <h2 class="subheader"></h2> -->
+    <div class="grid-x">
+
+      <div class="cell medium-12 callout small primary" style="opacity: 0.7">
+
+        <h1>About</h1>
+
+      </div>
+
     </div>
-  </div>
 
-  <div class="row medium-8 large-7 columns">
+    <div class="grid-x">
 
-    <div class="blog-post">
-      <h3>Plan your next star gazing session</h3>
-      <!-- <img class="thumbnail" src="https://placehold.it/850x350"> -->
-      <p>Now what are the possibilities of warp drive? Cmdr Riker's nervous system has been invaded by an unknown microorganism. The organisms fuse to the nerve, intertwining at the molecular level. That's why the transporter's biofilters couldn't extract it. The vertex waves show a K-complex corresponding to an REM state. The engineering section's critical. Destruction is imminent. Their robes contain ultritium, highly explosive, virtually undetectable by your transporter.</p>
-      <!-- <div class="callout">
+      <div class="cell blog-post medium-12">
+        <h3>Plan your next star gazing session</h3>
+        <!-- <img class="thumbnail" src="https://placehold.it/850x350"> -->
+        <p>Now what are the possibilities of warp drive? Cmdr Riker's nervous system has been invaded by an unknown
+          microorganism. The organisms fuse to the nerve, intertwining at the molecular level. That's why the
+          transporter's biofilters couldn't extract it. The vertex waves show a K-complex corresponding to an REM
+          state.
+          The engineering section's critical. Destruction is imminent. Their robes contain ultritium, highly
+          explosive,
+          virtually undetectable by your transporter.</p>
+        <!-- <div class="callout">
         <ul class="menu simple">
           <li><a href="#">Author: Mike Mikers</a></li>
           <li><a href="#">Comments: 3</a></li>
         </ul>
       </div> -->
+      </div>
+
     </div>
-    
+
+    <footer>
+      <div class="cell shrink footer medium-12">
+        Copyright &copy;
+        <script type="text/javascript">
+          document.write(new Date().getFullYear());
+        </script>, coffeeCoders. All Rights Reserved.
+      </div>
+    </footer>
+
   </div>
 
-  <footer>
-    <div class="row column text-center">
-      Copyright &copy;
-      <script type="text/javascript">
-        document.write(new Date().getFullYear());
-      </script>, coffeeCoders. All Rights Reserved.
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
-  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  <script src="./assets/js/vendor/jquery.js"></script>
+  <script src="./assets/js/vendor/what-input.js"></script>
+  <script src="./assets/js/vendor/foundation.js"></script>
   <script>
     $(document).foundation();
   </script>

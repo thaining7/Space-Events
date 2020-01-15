@@ -1,11 +1,3 @@
-#events-table {
-    float: left;
-}
-
-#favorite-events {
-    float: right;
-}
-
 body {
     background-image: url(../images/hubble.png);
     font-family: 'Roboto', sans-serif;
