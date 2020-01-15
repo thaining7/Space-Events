@@ -6,7 +6,7 @@ https://star-lord.herokuapp.com/
 
 ---
 
-# Motivation
+# Description
 
 #### This applications goal is to provoke the users curiosity into the nature and origin of the universe by providing a glimpse into celestial events.
 
