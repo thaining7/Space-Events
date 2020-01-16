@@ -9,7 +9,7 @@ const StargazingTime = require('stargazing-time');
 // =============================================================
 module.exports = function (app) {
 
-  // Route for scrraping event data
+  // Route for scraping event data
 
   app.get("/api/scrape", function (req, res) {
 
@@ -17,48 +17,16 @@ module.exports = function (app) {
 
       let $ = cheerio.load(response.data);
 
-      // const urlElems = $("li");
-
-      // for (let i = 0; i < urlElems.length; i++) {
-
-      //   const urlDates = $(urlElems[i]).find("span.date-text");
-      //   const urlTitles = $(urlElems[i]).find("span.title-text");
-
-      //   if (urlDates && urlTitles) {
-
-      //     const titleText = $(urlTitles).text();
-      //     const dateText = $(urlDates).text();
-
-      //     console.log("Title text " + titleText);
-      //     console.log("Date text " + dateText);
-
-      //   }
-
-      // }
-
       $("li").each(function (i, elem) {
 
-        // const urlElems = $(this);
         const urlTitles = $(this).find("span.title-text").text();
         const urlDates = $(this).find("span.date-text").text();
         const result = {};
-
-        // for (var x = 0; x < urlElems.length; x++) {
 
         if (urlTitles && urlDates !== "") {
           result.title = urlTitles;
           result.date = urlDates;
         }
-
-        // }
-
-        // const result = {};
-
-        // result.date = $(this)
-        //   .find("span.date-text").text();
-
-        // result.title = $(this)
-        //   .find("span.title-text").text();
 
         db.Events.create(result)
           .then(function (dbEvent) {

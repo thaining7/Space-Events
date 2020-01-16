@@ -17,47 +17,62 @@
 
 <body>
 
-  <div class="top-bar" style="opacity: 0.7;">
-    <div class="top-bar-left">
-      <ul class="menu">
-        <li class="menu-text">Space Events Site</li>
+  <div class="grid-container">
 
-        <li><a href="/about">About</a></li>
-        <li><a href="/members">Home</a></li>
-
-      </ul>
-    </div>
-    <div class="top-bar-right">
-      <ul class="menu">
-
-        <li><a class="navbar-brand" href="/logout">
-            Logout
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="row column text-center">
-    <h2>Upcoming Stargazing Dates</h2>
-    <h3>Please select location below. All Times listed in CDT.</h3>
-    <hr>
-  </div>
-
-  <div class="row">
-
-    <div class="columns small-4">
-      <label>
-        Enter a City
-        <textarea placeholder="City" id="cityChoice"></textarea>
-      </label>
-      <button type="button" class="success button" id="submit"><i class="fas fa-moon">Find Dates</i></button>
+    <div class="title-bar" data-responsive-toggle="responsive-menu" data-hide-for="medium">
+      <button class="menu-icon" type="button" data-toggle="responsive-menu"></button>
+      <div class="title-bar-title">Menu</div>
     </div>
 
-    <hr id="nothing">
+    <div class="top-bar" id="responsive-menu" style="opacity: 0.7;">
+      <div class="top-bar-left">
+        <ul class="menu">
+          <li class="menu-text">Space Events</li>
 
-    <div class="row column text-center" id="nothingFound">
-      <h2>No results were found for that city. The forecast must be poor!</h2>
+          <li><a href="/about">About</a></li>
+          <li><a href="/members">Home</a></li>
+
+        </ul>
+      </div>
+      <div class="top-bar-right">
+        <ul class="menu">
+
+          <li><a href="/logout">
+              Logout
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid-x">
+
+      <div class="cell shrink header medium-12">
+
+        <h2>Upcoming Stargazing Dates</h2>
+        <h3>Please select location below. All Times listed in CDT.</h3>
+        <hr>
+
+      </div>
+
+    </div>
+
+    <div class="grid-x">
+
+      <div class="cell small-12 medium-4">
+        <label>
+          Enter a City
+          <textarea placeholder="City" id="cityChoice"></textarea>
+        </label>
+        <button type="button" class="success button" id="submit"><i class="fas fa-moon">Find Dates</i></button>
+      </div>
+
+      <hr id="nothing">
+
+      <div class="cell medium-12" id="nothingFound">
+        <h2>No results were found for that city. The forecast must be poor!</h2>
+      </div>
+
     </div>
 
     <!-- <div class="columns small-4"> Keeping this in here in case we ever wanted to do a state option - Sam
@@ -118,74 +133,65 @@
         </select>
       </label>
 </div> -->
-  </div>
 
-  <div class="row">
-
-    <div class="columns medium-12">
-
-      <div class="grid-container">
-        <div class="grid-x grid-padding-x small-up-2 medium-up-3">
-          <div class="cell" id="1">
-            <div class="card">
-              <img id="weather-pic-1" src="">
-              <div class="card-section">
-                <h4 id="day-1"></h4>
-                <p id="weather-1" style="color: black"></p>
-              </div>
-            </div>
-          </div>
-          <div class="cell" id="2">
-            <div class="card">
-              <img id="weather-pic-2" src="">
-              <div class="card-section">
-                <h4 id="day-2"></h4>
-                <p id="weather-2" style="color: black"></p>
-              </div>
-            </div>
-          </div>
-          <div class="cell" id="3">
-            <div class="card">
-              <img id="weather-pic-3" src="">
-              <div class="card-section">
-                <h4 id="day-3"></h4>
-                <p id="weather-3" style="color: black"></p>
-              </div>
-            </div>
-          </div>
-          <div class="cell" id="4">
-            <div class="card">
-              <img id="weather-pic-4" src="">
-              <div class="card-section">
-                <h4 id="day-4"></h4>
-                <p id="weather-4" style="color: black"></p>
-              </div>
-            </div>
-          </div>
-          <div class="cell" id="5">
-            <div class="card">
-              <img id="weather-pic-5" src="">
-              <div class="card-section">
-                <h4 id="day-5"></h4>
-                <p id="weather-5" style="color: black"></p>
-              </div>
-            </div>
+    <div class="grid-x grid-padding-x small-up-2 medium-up-3">
+      <div class="cell" id="1">
+        <div class="card">
+          <img id="weather-pic-1" src="">
+          <div class="card-section">
+            <h4 id="day-1"></h4>
+            <p id="weather-1" style="color: black"></p>
           </div>
         </div>
       </div>
-
+      <div class="cell" id="2">
+        <div class="card">
+          <img id="weather-pic-2" src="">
+          <div class="card-section">
+            <h4 id="day-2"></h4>
+            <p id="weather-2" style="color: black"></p>
+          </div>
+        </div>
+      </div>
+      <div class="cell" id="3">
+        <div class="card">
+          <img id="weather-pic-3" src="">
+          <div class="card-section">
+            <h4 id="day-3"></h4>
+            <p id="weather-3" style="color: black"></p>
+          </div>
+        </div>
+      </div>
+      <div class="cell" id="4">
+        <div class="card">
+          <img id="weather-pic-4" src="">
+          <div class="card-section">
+            <h4 id="day-4"></h4>
+            <p id="weather-4" style="color: black"></p>
+          </div>
+        </div>
+      </div>
+      <div class="cell" id="5">
+        <div class="card">
+          <img id="weather-pic-5" src="">
+          <div class="card-section">
+            <h4 id="day-5"></h4>
+            <p id="weather-5" style="color: black"></p>
+          </div>
+        </div>
+      </div>
     </div>
+
+    <footer>
+      <div class="row column text-center">
+        Copyright &copy;
+        <script type="text/javascript">
+          document.write(new Date().getFullYear());
+        </script>, Trevor Haining. All Rights Reserved.
+      </div>
+    </footer>
 
   </div>
-
-  <footer>
-    <div class="row column text-center">
-      Copyright &copy;
-      <script type="text/javascript">
-        document.write(new Date().getFullYear());
-      </script>, coffeeCoders. All Rights Reserved.
-    </div>
-  </footer>
 
   <script src="./assets/js/vendor/jquery.js"></script>
   <script src="./assets/js/vendor/what-input.js"></script>
