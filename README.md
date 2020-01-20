@@ -37,20 +37,41 @@ https://star-lord.herokuapp.com/
 
 # Code Example
 
-#### jQuery GET request to the APOD API server route to append daily astronomy photo to the main page
+#### API route for scraping astronomy events from seasky.org
 ```
-$.get("/api/apod", function (data) {
-    console.log(data);
+app.get("/api/scrape", function (req, res) {
 
-    var imageURL = data.url;
-    var imageTitle = data.title;
-    var image = $("<img>")
-        .attr("src", imageURL)
-        
-        $("#fav-img")
-          .append(image)
-          .append(imageTitle);
-    
+    axios.get("http://www.seasky.org/astronomy/astronomy-calendar-2020.html").then(function (response) {
+
+      let $ = cheerio.load(response.data);
+
+      $("li").each(function (i, elem) {
+
+        const urlTitles = $(this).find("span.title-text").text();
+        const urlDates = $(this).find("span.date-text").text();
+        const result = {};
+
+        if (urlTitles && urlDates !== "") {
+          result.title = urlTitles;
+          result.date = urlDates;
+        }
+
+        db.Events.create(result)
+          .then(function (dbEvent) {
+            // View the added result in the console
+            console.log("Events Result: " + dbEvent);
+          })
+          .catch(function (err) {
+            // If an error occurred, log it
+            console.log(err);
+          });
+
+      });
+
+      // Send a message to the client
+      res.send("Scrape Complete");
+
+    });
   });
   ```
   
