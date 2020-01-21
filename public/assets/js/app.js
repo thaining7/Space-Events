@@ -13,15 +13,22 @@ $(document).ready(function () {
 
 
 $.get("/api/apod", function (data) {
+
   console.log(data);
 
-  var imageURL = data.url;
-  var imageTitle = data.title;
-  var image = $("<img>")
-    .attr("src", imageURL)
+  var mediaURL = data.url;
+  var mediaTitle = data.title;
+
+  if (data.media_type === "video") {
+    var media = $("<div class='responsive-embed'>")
+    .append("<iframe width='420' height='315' src='" + mediaURL + "' frameborder='0' allowfullscreen></iframe>");
+  } else {
+    var media = $("<img>")
+    .attr("src", mediaURL);
+  }
 
   $("#fav-img")
-    .append(image)
-    .append(imageTitle);
+    .append(media)
+    .append(mediaTitle);
 
 });
