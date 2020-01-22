@@ -16,8 +16,8 @@ $.get("/api/apod", function (data) {
 
   console.log(data);
 
-  var mediaURL = data.url;
-  var mediaTitle = data.title;
+  const mediaURL = data.url;
+  const mediaTitle = data.title;
 
   if (data.media_type === "video") {
     var media = $("<div class='responsive-embed'>")
