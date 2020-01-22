@@ -2,9 +2,7 @@
 
 #### One-stop shop for Stargazers and lovers of Astronomy!
 
-https://star-lord.herokuapp.com/
-
----
+https://space-events.herokuapp.com/
 
 # Description
 
