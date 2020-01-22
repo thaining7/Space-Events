@@ -19,23 +19,23 @@ https://space-events.herokuapp.com/
 * Express
 * MySQL
 * Sequelize
-* Foundation
-* stargazing-time (NPM)
-* cheerio (NPM)
+* Foundation CSS
+* Stargazing-time (NPM)
+* Cheerio (NPM)
 * Astronomy Picture of the Day (APOD) (NPM / API)
 * OpenWeatherApp (API)
 * MomentJS
-* request (NPM)
+* Request (NPM)
 * local-web-server (NPM)
 
 # Features
 
-* Daily updated photo from the Astronomy Picture of the Day API
-* Upcoming stargazing weather data
+* Daily updated photo/video from the Astronomy Picture of the Day API
+* Upcoming stargazing weather data from the Stargazing-time API
 
 # Code Example
 
-#### API route for scraping astronomy events from seasky.org
+#### API route for scraping astronomy calendar from seasky.org
 ```
 app.get("/api/scrape", function (req, res) {
 
@@ -83,5 +83,5 @@ app.get("/api/scrape", function (req, res) {
   * Sign up and create a username and password, or sign in with your existing username and password 
   * Upon logging in, the main page will display upcoming events
   * Click the favorite button to save an event
-  * Check out the photo of the day displayed in the favorited events menu
-  * Click the Upcoming Stargaze Dates link in the navigation menu and enter a city to find the best upcoming weather conditions for stargazing
+  * Click the unfavorite button to unsave an event
+  * Click the Stargazing link in the navigation menu and enter a city to find the best upcoming weather conditions for stargazing
