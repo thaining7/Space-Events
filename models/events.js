@@ -1,7 +1,7 @@
 module.exports = function (sequelize, DataTypes) {
   // Added code here to create an Events model
   // 'return' the events after defining
-  var Events = sequelize.define("Events", {
+  const Events = sequelize.define("Events", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,

@@ -4,17 +4,17 @@
 // ******************************************************************************
 // *** Dependencies
 // =============================================================
-var express = require("express");
-var session = require("express-session");
-var passport = require("./config/passport");
+const express = require("express");
+const session = require("express-session");
+const passport = require("./config/passport");
 
 // Sets up the Express App
 // =============================================================
-var app = express();
-var PORT = process.env.PORT || 3000;
+const app = express();
+const PORT = process.env.PORT || 3000;
 
 // Requiring our models for syncing
-var db = require("./models");
+const db = require("./models");
 
 // Static directory
 app.use(express.static("public"));

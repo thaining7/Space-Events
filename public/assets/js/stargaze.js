@@ -6,7 +6,7 @@ $(function () {
 
         hideStuff();
 
-        var cityChoice = $("#cityChoice").val().trim(); //Taking user city input
+        const cityChoice = $("#cityChoice").val().trim(); //Taking user city input
 
         $.get("/api/stargaze/" + cityChoice, function (results) { //Call to API route using stargazing-time / OpenWeather for city
 
@@ -16,7 +16,7 @@ $(function () {
                 $("#nothingFound").show();
             }
             else {
-                var x = 1; //Hiding all cells before deciding to show them
+                let x = 1; //Hiding all cells before deciding to show them
 
                 for (i = 1; i < 6; i++) {
                     $("#" + i).hide();
