@@ -1,4 +1,4 @@
-// Requiring our models
+require('dotenv').config();
 const db = require("../models");
 const request = require('request');
 const axios = require("axios");
@@ -57,7 +57,7 @@ module.exports = function (app) {
   app.get("/api/stargaze/:city", function (req, res) {
     StargazingTime.getGoodTimes({
       city: req.params.city + ',us',
-      apiKey: '028bfc49fd0424eb39c6628c6a864f9e'
+      apiKey: process.env.OWAPI_KEY
     })
       .then(function (data) {
         res.json(data);
