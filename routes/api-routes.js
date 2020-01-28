@@ -1,5 +1,7 @@
 // const dotenv = require('dotenv');
-require('dotenv').config();
+if (process.env.NODE_ENV !== 'production') {
+  require('dotenv').load();
+};
 const db = require("../models");
 const request = require('request');
 const axios = require("axios");
