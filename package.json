@@ -28,5 +28,8 @@
     "request": "^2.88.0",
     "sequelize": "^4.44.0",
     "stargazing-time": "^1.0.0"
+  },
+  "devDependencies": {
+    "standard": "^14.3.1"
   }
 }
